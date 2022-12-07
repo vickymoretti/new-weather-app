@@ -11,18 +11,19 @@
 			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 			crossorigin="anonymous"
 		/>
-		<title>Weather app 🌈</title>
+		<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 		<link rel="stylesheet" href="src/style.css" />
+		<title>Weather app 🌈</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="weather-app-wrapper">
 				<div class="weather-app">
 					<div class="overview">
-						<h1>New York, NY, USA</h1>
+						<h1 id="city">New York, NY, USA</h1>
 						<ul>
 							<li>Friday 05:00</li>
-							<li>clear</li>
+							<li id="description">clear</li>
 						</ul>
 					</div>
 					<div class="row">
