@@ -70,3 +70,12 @@ a {
 	color: rgb(33, 33, 33);
 	cursor: default;
 }
+
+.weather-forecast {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.weather-forecast-temperature {
+	font-size: 13px;
+}
