@@ -74,3 +74,8 @@ a {
 .weather-forecast-temperature {
 	font-size: 13px;
 }
+
+.col-2 {
+	border: 1px solid #dadde1;
+	border-radius: 5px;
+}
