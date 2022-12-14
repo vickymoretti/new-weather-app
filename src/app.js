@@ -82,23 +82,34 @@ function showCelsiusTemperature(event) {
 	temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	return days[day];
+}
+
 function displayForecast(response) {
-	console.log(response.data.daily);
+	let forecast = response.data.daily;
 	let forecastElement = document.querySelector("#forecast");
-	let days = ["Thu", "Fri", "Sat"];
+
 	let forecastHTML = `<div class="row">`;
-	days.forEach(function (day) {
-		forecastHTML =
-			forecastHTML +
-			`<div class="col-2">
-			<div class="weather-forecast-date">${day} </div>
+	forecast.forEach(function (forecastDay, index) {
+		if (index < 6) {
+			forecastHTML =
+				forecastHTML +
+				`<div class="col-2">
+			<div class="weather-forecast-date">${formatDay(forecastDay.time)} </div>
 								<img
-									src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+									src="${forecastDay.condition.icon_url} "
 									alt="rainy"
 									width="36"
 								/>
-								<div class="weather-forecast-temperature"> 12° | 18° </div>
+								<div class="weather-forecast-temperature"> ${Math.round(
+									forecastDay.temperature.maximum
+								)}° | ${Math.round(forecastDay.temperature.minimum)}°</div>
 							</div>`;
+		}
 	});
 
 	forecastHTML = forecastHTML + `</div>`;
