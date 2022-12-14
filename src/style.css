@@ -1,81 +1,91 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-	color: #878787;
-	font-size: 24px;
-	font-weight: 100;
-	line-height: 28px;
-	margin-bottom: 0;
+  color: #878787;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	font-size: 16px;
-	color: #878787;
-	font-weight: 100;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #878787;
+  font-weight: 100;
 }
 
 li:first-letter {
-	text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
-.weather-app-wrapper {
-	max-width: 600px;
-	margin: 30px auto;
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 16px;
 }
 
 .weather-app {
-	border: 1px solid #dadde1;
-	border-radius: 5px;
-	padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .overview {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .weather-temperature img {
-	margin-right: 5px;
-	height: 64px;
-	width: 64px;
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
 }
 
 .weather-temperature strong {
-	color: rgb(33, 33, 33);
-	font-size: 64px;
-	font-weight: 400;
-	line-height: 1;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .weather-temperature .units {
-	position: relative;
-	font-size: 16px;
-	top: -34px;
+  position: relative;
+  font-size: 16px;
+  top: -34px;
 }
 
 .weather-forecast {
-	text-align: center;
-	margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  gap: 1rem;
+  grid-auto-columns: minmax(auto, 560px);
+  height: 118px;
 }
 
-.weather-forecast-temperature {
-	font-size: 13px;
-}
-
-.col-2 {
-	border: 1px solid #dadde1;
-	border-radius: 5px;
+.day-forecast-card {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: #dadde1 1px solid;
+  border-radius: 5px;
 }
