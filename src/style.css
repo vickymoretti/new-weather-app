@@ -66,11 +66,6 @@ a {
 	top: -34px;
 }
 
-.weather-temperature .active {
-	color: rgb(33, 33, 33);
-	cursor: default;
-}
-
 .weather-forecast {
 	text-align: center;
 	margin-top: 20px;
