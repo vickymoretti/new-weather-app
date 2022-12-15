@@ -1,5 +1,10 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	background: radial-gradient(
+		circle at 12.3% 19.3%,
+		rgb(85, 88, 218) 0%,
+		rgb(95, 209, 249) 100.2%
+	);
 }
 
 h1 {
@@ -41,6 +46,7 @@ a {
 	border: 1px solid #dadde1;
 	border-radius: 5px;
 	padding: 20px;
+	background-color: white;
 }
 
 .overview {
@@ -78,4 +84,21 @@ a {
 .col-2 {
 	border: 1px solid #dadde1;
 	border-radius: 5px;
+	width: 14.2%;
+}
+
+.col-2:hover {
+	background-color: #dadde1;
+}
+
+.row {
+	justify-content: space-between;
+}
+
+.open-source {
+	color: white;
+}
+
+.btn {
+	background-color: #5664dd;
 }
